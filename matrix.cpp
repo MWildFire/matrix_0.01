@@ -15,7 +15,7 @@ matrix_t::matrix_t() : elements_{ nullptr }, rows_{ 0 }, collumns_{ 0 }
 {
 }
 
-matrix_t::matrix_t (std::size_t collumns_, std::size_t rows_)
+matrix_t::matrix_t (std::size_t collumns, std::size_t rows)
 {
     elements_ = new float *[rows_];
     for (std::size_t i = 0; i < rows_; i++)
@@ -26,8 +26,8 @@ matrix_t::matrix_t (std::size_t collumns_, std::size_t rows_)
             elements_[i][j] = 0;
         }
     }
-    this -> rows_ = rows_
-    this -> collumns_ = collumns;
+    this -> rows = rows_
+    this -> collumns = collumns;
 }
 
 matrix_t::matrix_t( matrix_t const & other )
